@@ -25,6 +25,10 @@ public class FakeUserDB {
         address1.setPais("Pais 1");
         user1.setAddress(address1);
 
+        user1.setPassword("pwd");
+        user1.setExpirationDate("2025/04/01");
+        user1.setLastLoginDate("2025/03/27");
+
         dbUsers.put(user1.getId(), user1);
     }
 

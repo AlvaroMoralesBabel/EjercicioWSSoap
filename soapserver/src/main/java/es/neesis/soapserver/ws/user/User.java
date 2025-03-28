@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2025.03.28 a las 11:37:30 AM CET 
+// Generado el: 2025.03.28 a las 12:21:50 PM CET 
 //
 
 
@@ -28,6 +28,9 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="username" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="address" type="{http://www.neesis.es/soapserver/ws/user}address"/&gt;
+ *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="expirationDate" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="lastLoginDate" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -41,7 +44,10 @@ import jakarta.xml.bind.annotation.XmlType;
     "id",
     "username",
     "email",
-    "address"
+    "address",
+    "password",
+    "expirationDate",
+    "lastLoginDate"
 })
 public class User {
 
@@ -52,6 +58,12 @@ public class User {
     protected String email;
     @XmlElement(required = true)
     protected Address address;
+    @XmlElement(required = true)
+    protected String password;
+    @XmlElement(required = true)
+    protected String expirationDate;
+    @XmlElement(required = true)
+    protected String lastLoginDate;
 
     /**
      * Obtiene el valor de la propiedad id.
@@ -139,6 +151,78 @@ public class User {
      */
     public void setAddress(Address value) {
         this.address = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad password.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * Define el valor de la propiedad password.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPassword(String value) {
+        this.password = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad expirationDate.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getExpirationDate() {
+        return expirationDate;
+    }
+
+    /**
+     * Define el valor de la propiedad expirationDate.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setExpirationDate(String value) {
+        this.expirationDate = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad lastLoginDate.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLastLoginDate() {
+        return lastLoginDate;
+    }
+
+    /**
+     * Define el valor de la propiedad lastLoginDate.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLastLoginDate(String value) {
+        this.lastLoginDate = value;
     }
 
 }
